@@ -2,8 +2,8 @@
   "name": "tutors",
   "displayName": "tutors",
   "expo": {
-    "name": "tutors",
-    "slug": "tutors",
+    "name": "expo-tutors-app",
+    "slug": "expo-tutors-app",
     "privacy": "unlisted",
     "sdkVersion": "36.0.0",
     "version": "1.0.0",
@@ -12,6 +12,8 @@
       "ios",
       "android",
       "web"
-    ]
+    ],
+    "description": "Video conferencing learning app for students",
+    "githubUrl": "https://github.com/himani-algo/expo-tutors-app.git"
   }
 }
