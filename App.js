@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { Platform, StyleSheet, Text, View , Button} from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component {
-  render() {
+export default function App() {
+  const [outputText , setOutputText] = useState('To get started, edit App.js')
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
+        <Text style={styles.instructions}>{outputText}</Text>
         <Text style={styles.instructions}>{instructions}</Text>
+        <Button title="Change text" onPress = {()=> setOutputText('Text Changed !')}/>
       </View>
     );
-  }
+  
 }
 
 const styles = StyleSheet.create({
